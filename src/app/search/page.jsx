@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   Container,
@@ -45,7 +45,7 @@ import {
   searchFlightHotelPackages,
 } from "../../lib/mockData.jsx";
 
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -561,5 +561,38 @@ export default function SearchPage() {
         variant="drawer"
       />
     </div>
+  );
+}
+
+// Loading component for Suspense fallback
+function SearchPageLoading() {
+  return (
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900">
+      <Navbar />
+      <Box className="bg-white dark:bg-gray-800 shadow-sm py-4">
+        <Container maxWidth="lg">
+          <Skeleton variant="rectangular" height={80} />
+        </Container>
+      </Box>
+      <Container maxWidth="lg" className="py-4 sm:py-6">
+        <Box className="px-4 sm:px-0">
+          <Skeleton variant="text" width={300} height={40} className="mb-4" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {[...Array(6)].map((_, index) => (
+              <Skeleton key={index} variant="rectangular" height={250} className="rounded-lg" />
+            ))}
+          </div>
+        </Box>
+      </Container>
+    </div>
+  );
+}
+
+// Main component with Suspense boundary
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<SearchPageLoading />}>
+      <SearchPageContent />
+    </Suspense>
   );
 }

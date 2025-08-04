@@ -277,7 +277,7 @@ export default function HomePage() {
                   variant="body2"
                   className="text-gray-600 dark:text-gray-400 text-sm sm:text-base"
                 >
-                  Find a lower price? We'll match it and give you an extra 10%
+                  Find a lower price? We&apos;ll match it and give you an extra 10%
                   off your next booking.
                 </Typography>
               </Box>

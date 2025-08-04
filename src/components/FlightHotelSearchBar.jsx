@@ -376,7 +376,7 @@ export default function FlightHotelSearchBar({ variant = "full", onSearch }) {
             variant="body2"
             className="text-gray-600 dark:text-gray-400"
           >
-            We'll match any lower price
+            We&apos;ll match any lower price
           </Typography>
         </Box>
         <Box>

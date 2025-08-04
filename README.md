@@ -62,13 +62,22 @@ A modern, responsive hotel booking platform frontend built with **Next.js**, **R
    npm install
    ```
 
-2. **Start the development server:**
+2. **Set up environment variables:**
+
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env.local
+   
+   # Edit .env.local with your preferred settings (optional for basic functionality)
+   ```
+
+3. **Start the development server:**
 
    ```bash
    npm run dev
    ```
 
-3. **Open your browser:**
+4. **Open your browser:**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Available Scripts
@@ -141,6 +150,28 @@ The application uses comprehensive mock data including:
 - Toast notifications (ready for integration)
 
 ## 🔧 Customization
+
+### Environment Variables
+
+The project uses environment variables for configuration. Copy `.env.example` to `.env.local` and customize as needed:
+
+```bash
+# Basic Configuration
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_NAME=StayNest
+NEXT_PUBLIC_USE_MOCK_DATA=true
+
+# Feature Toggles
+NEXT_PUBLIC_ENABLE_DARK_MODE=true
+NEXT_PUBLIC_ENABLE_FAVORITES=true
+NEXT_PUBLIC_ENABLE_BOOKING=true
+```
+
+**Key Environment Variables:**
+
+- `NEXT_PUBLIC_USE_MOCK_DATA` - Set to `true` for development with mock data
+- `NEXT_PUBLIC_ENABLE_*` - Feature flags to enable/disable functionality
+- `NEXT_PUBLIC_DEBUG_MODE` - Enable debug information in development
 
 ### Theme Configuration
 

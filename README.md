@@ -67,7 +67,7 @@ A modern, responsive hotel booking platform frontend built with **Next.js**, **R
    ```bash
    # Copy the example environment file
    cp .env.example .env.local
-   
+
    # Edit .env.local with your preferred settings (optional for basic functionality)
    ```
 

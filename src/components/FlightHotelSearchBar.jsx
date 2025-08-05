@@ -18,6 +18,9 @@ import {
   CalendarToday,
   Person,
   Search,
+  AttachMoney,
+  GpsFixed,
+  CardGiftcard,
   Add,
   Remove,
 } from "@mui/icons-material";
@@ -137,9 +140,12 @@ export default function FlightHotelSearchBar({ variant = "full", onSearch }) {
       <Box className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900 dark:to-green-900 p-4 rounded-lg">
         <Typography
           variant="h6"
-          className="font-semibold mb-2 text-blue-800 dark:text-blue-200"
+          className="font-semibold mb-2 text-blue-800 dark:text-blue-200 flex items-center gap-2"
         >
-          ✈️ + 🏨 Save more when you book together
+          <Flight sx={{ color: "#1976d2" }} />
+          <Typography component="span">+</Typography>
+          <Hotel sx={{ color: "#d32f2f" }} />
+          Save more when you book together
         </Typography>
         <Typography
           variant="body2"
@@ -369,8 +375,12 @@ export default function FlightHotelSearchBar({ variant = "full", onSearch }) {
       {/* Package Features */}
       <Box className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            💰 Best price guarantee
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center justify-center gap-2"
+          >
+            <AttachMoney sx={{ color: "#4caf50" }} />
+            Best price guarantee
           </Typography>
           <Typography
             variant="body2"
@@ -380,8 +390,12 @@ export default function FlightHotelSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            🎯 One-stop booking
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center justify-center gap-2"
+          >
+            <GpsFixed sx={{ color: "#ff9800" }} />
+            One-stop booking
           </Typography>
           <Typography
             variant="body2"
@@ -391,8 +405,12 @@ export default function FlightHotelSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            🎁 Extra savings
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center justify-center gap-2"
+          >
+            <CardGiftcard sx={{ color: "#e91e63" }} />
+            Extra savings
           </Typography>
           <Typography
             variant="body2"

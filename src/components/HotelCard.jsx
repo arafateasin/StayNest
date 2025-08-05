@@ -170,7 +170,7 @@ export default function HotelCard({ hotel, variant = "grid" }) {
 
   return (
     <Link href={`/hotel/${hotel.id}`}>
-      <Card className="hover:shadow-lg transition-shadow duration-300 cursor-pointer h-full flex flex-col">
+      <Card className="hover:shadow-lg transition-shadow duration-300 cursor-pointer h-full flex flex-col relative overflow-hidden">
         <Box className="relative">
           <CardMedia
             component="img"
@@ -181,13 +181,20 @@ export default function HotelCard({ hotel, variant = "grid" }) {
           />
           <IconButton
             onClick={toggleFavorite}
-            className="absolute top-2 right-2 bg-white bg-opacity-80 hover:bg-opacity-100"
+            className="absolute top-2 right-2 bg-white bg-opacity-90 hover:bg-opacity-100 shadow-sm"
             size="small"
+            sx={{
+              padding: '6px',
+              '&:hover': {
+                transform: 'scale(1.1)',
+              },
+              transition: 'all 0.2s ease-in-out',
+            }}
           >
             {isFavorite ? (
-              <Favorite className="text-red-500" />
+              <Favorite className="text-red-500" fontSize="small" />
             ) : (
-              <FavoriteBorder className="text-gray-600" />
+              <FavoriteBorder className="text-gray-600" fontSize="small" />
             )}
           </IconButton>
         </Box>

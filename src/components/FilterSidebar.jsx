@@ -17,7 +17,15 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
-import { Close, ExpandMore, FilterList } from "@mui/icons-material";
+import {
+  Close,
+  ExpandMore,
+  FilterList,
+  AttachMoney,
+  Star,
+  LocationOn,
+  Hotel,
+} from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 
 const amenityOptions = [
@@ -93,7 +101,7 @@ export default function FilterSidebar({
   };
 
   const FilterContent = () => (
-    <Box className="w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+    <Box className="w-full max-w-sm bg-white rounded-lg shadow-sm dark:bg-gray-800">
       {/* Header */}
       <Box className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
         <Box className="flex items-center gap-2">
@@ -114,7 +122,7 @@ export default function FilterSidebar({
             localFilters.amenities.length > 0) && (
             <Typography
               variant="caption"
-              className="text-primary-600 font-medium"
+              className="font-medium text-primary-600"
             >
               {(localFilters.priceRange[0] > 0 ||
               localFilters.priceRange[1] < 500
@@ -141,25 +149,26 @@ export default function FilterSidebar({
         {/* Price Range */}
         <Accordion
           defaultExpanded
-          className="border border-gray-200 dark:border-gray-700 rounded-lg mb-3 shadow-sm"
+          className="mb-3 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
           elevation={0}
         >
           <AccordionSummary
             expandIcon={<ExpandMore />}
-            className="bg-gray-50 dark:bg-gray-800 rounded-t-lg"
+            className="rounded-t-lg bg-gray-50 dark:bg-gray-800"
           >
             <Box className="flex items-center gap-2">
               <Typography
                 variant="subtitle1"
-                className="font-semibold text-gray-900 dark:text-gray-100"
+                className="flex items-center gap-2 font-semibold text-gray-900 dark:text-gray-100"
               >
-                💰 Price Range
+                <AttachMoney sx={{ color: "#4caf50" }} />
+                Price Range
               </Typography>
               {(localFilters.priceRange[0] > 0 ||
                 localFilters.priceRange[1] < 500) && (
                 <Typography
                   variant="caption"
-                  className="text-primary-600 bg-primary-50 px-2 py-1 rounded-full"
+                  className="px-2 py-1 rounded-full text-primary-600 bg-primary-50"
                 >
                   ${localFilters.priceRange[0]} - ${localFilters.priceRange[1]}
                 </Typography>
@@ -199,24 +208,25 @@ export default function FilterSidebar({
         {/* Rating */}
         <Accordion
           defaultExpanded
-          className="border border-gray-200 dark:border-gray-700 rounded-lg mb-3 shadow-sm"
+          className="mb-3 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
           elevation={0}
         >
           <AccordionSummary
             expandIcon={<ExpandMore />}
-            className="bg-gray-50 dark:bg-gray-800 rounded-t-lg"
+            className="rounded-t-lg bg-gray-50 dark:bg-gray-800"
           >
             <Box className="flex items-center gap-2">
               <Typography
                 variant="subtitle1"
-                className="font-semibold text-gray-900 dark:text-gray-100"
+                className="flex items-center gap-2 font-semibold text-gray-900 dark:text-gray-100"
               >
-                ⭐ Minimum Rating
+                <Star sx={{ color: "#ffeb3b" }} />
+                Minimum Rating
               </Typography>
               {localFilters.minRating > 0 && (
                 <Typography
                   variant="caption"
-                  className="text-primary-600 bg-primary-50 px-2 py-1 rounded-full"
+                  className="px-2 py-1 rounded-full text-primary-600 bg-primary-50"
                 >
                   {localFilters.minRating}+ stars
                 </Typography>
@@ -242,7 +252,7 @@ export default function FilterSidebar({
               />
               <Typography
                 variant="body2"
-                className="text-gray-600 dark:text-gray-400 font-medium"
+                className="font-medium text-gray-600 dark:text-gray-400"
               >
                 {localFilters.minRating > 0
                   ? `${localFilters.minRating} stars and above`
@@ -255,24 +265,25 @@ export default function FilterSidebar({
         {/* Distance */}
         <Accordion
           defaultExpanded
-          className="border border-gray-200 dark:border-gray-700 rounded-lg mb-3 shadow-sm"
+          className="mb-3 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
           elevation={0}
         >
           <AccordionSummary
             expandIcon={<ExpandMore />}
-            className="bg-gray-50 dark:bg-gray-800 rounded-t-lg"
+            className="rounded-t-lg bg-gray-50 dark:bg-gray-800"
           >
             <Box className="flex items-center gap-2">
               <Typography
                 variant="subtitle1"
-                className="font-semibold text-gray-900 dark:text-gray-100"
+                className="flex items-center gap-2 font-semibold text-gray-900 dark:text-gray-100"
               >
-                📍 Distance from Center
+                <LocationOn sx={{ color: "#f44336" }} />
+                Distance from Center
               </Typography>
               {localFilters.maxDistance < 20 && (
                 <Typography
                   variant="caption"
-                  className="text-primary-600 bg-primary-50 px-2 py-1 rounded-full"
+                  className="px-2 py-1 rounded-full text-primary-600 bg-primary-50"
                 >
                   Within {localFilters.maxDistance} km
                 </Typography>
@@ -299,7 +310,7 @@ export default function FilterSidebar({
               />
               <Typography
                 variant="body2"
-                className="text-gray-600 dark:text-gray-400 font-medium"
+                className="font-medium text-gray-600 dark:text-gray-400"
               >
                 Within {localFilters.maxDistance} km from city center
               </Typography>
@@ -310,24 +321,25 @@ export default function FilterSidebar({
         {/* Amenities */}
         <Accordion
           defaultExpanded
-          className="border border-gray-200 dark:border-gray-700 rounded-lg mb-3 shadow-sm"
+          className="mb-3 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700"
           elevation={0}
         >
           <AccordionSummary
             expandIcon={<ExpandMore />}
-            className="bg-gray-50 dark:bg-gray-800 rounded-t-lg"
+            className="rounded-t-lg bg-gray-50 dark:bg-gray-800"
           >
             <Box className="flex items-center gap-2">
               <Typography
                 variant="subtitle1"
-                className="font-semibold text-gray-900 dark:text-gray-100"
+                className="flex items-center gap-2 font-semibold text-gray-900 dark:text-gray-100"
               >
-                🏨 Amenities
+                <Hotel sx={{ color: "#2196f3" }} />
+                Amenities
               </Typography>
               {localFilters.amenities.length > 0 && (
                 <Typography
                   variant="caption"
-                  className="text-primary-600 bg-primary-50 px-2 py-1 rounded-full"
+                  className="px-2 py-1 rounded-full text-primary-600 bg-primary-50"
                 >
                   {localFilters.amenities.length} selected
                 </Typography>
@@ -335,7 +347,7 @@ export default function FilterSidebar({
             </Box>
           </AccordionSummary>
           <AccordionDetails className="bg-white dark:bg-gray-900">
-            <Box className="space-y-2 max-h-60 overflow-y-auto">
+            <Box className="space-y-2 overflow-y-auto max-h-60">
               {amenityOptions.map((amenity) => (
                 <FormControlLabel
                   key={amenity}
@@ -364,7 +376,7 @@ export default function FilterSidebar({
                       {amenity}
                     </Typography>
                   }
-                  className="block hover:bg-gray-50 dark:hover:bg-gray-800 p-1 rounded transition-colors"
+                  className="block p-1 transition-colors rounded hover:bg-gray-50 dark:hover:bg-gray-800"
                 />
               ))}
             </Box>
@@ -372,12 +384,12 @@ export default function FilterSidebar({
         </Accordion>
 
         {/* Action Buttons */}
-        <Box className="sticky bottom-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4 space-y-3">
+        <Box className="sticky bottom-0 p-4 space-y-3 bg-white border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700">
           <Button
             fullWidth
             variant="contained"
             onClick={handleApplyFilters}
-            className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 rounded-lg shadow-md"
+            className="py-3 font-semibold text-white rounded-lg shadow-md bg-primary-600 hover:bg-primary-700"
             size="large"
           >
             Apply Filters
@@ -401,7 +413,7 @@ export default function FilterSidebar({
             fullWidth
             variant="outlined"
             onClick={handleClearFilters}
-            className="border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 font-medium py-2 rounded-lg"
+            className="py-2 font-medium text-gray-700 border-gray-300 rounded-lg dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
           >
             Clear All Filters
           </Button>
@@ -412,7 +424,7 @@ export default function FilterSidebar({
 
   if (variant === "sidebar") {
     return (
-      <Box className="hidden lg:block sticky top-6">
+      <Box className="sticky hidden lg:block top-6">
         <FilterContent />
       </Box>
     );

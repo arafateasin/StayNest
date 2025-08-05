@@ -277,8 +277,8 @@ export default function HomePage() {
                   variant="body2"
                   className="text-gray-600 dark:text-gray-400 text-sm sm:text-base"
                 >
-                  Find a lower price? We&apos;ll match it and give you an extra 10%
-                  off your next booking.
+                  Find a lower price? We&apos;ll match it and give you an extra
+                  10% off your next booking.
                 </Typography>
               </Box>
             </Grid>
@@ -369,14 +369,20 @@ export default function HomePage() {
                   className="h-12 sm:h-16 w-auto mb-3 sm:mb-4 mx-auto md:mx-0"
                 />
               </Box>
-              <Typography variant="body2" className="text-gray-400 mb-4 text-center md:text-left text-sm sm:text-base">
+              <Typography
+                variant="body2"
+                className="text-gray-400 mb-4 text-center md:text-left text-sm sm:text-base"
+              >
                 Your trusted partner for finding perfect accommodations
                 worldwide.
               </Typography>
             </Grid>
 
             <Grid item xs={6} sm={6} md={2}>
-              <Typography variant="h6" className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              <Typography
+                variant="h6"
+                className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base"
+              >
                 Company
               </Typography>
               <Box className="space-y-1 sm:space-y-2">
@@ -402,7 +408,10 @@ export default function HomePage() {
             </Grid>
 
             <Grid item xs={6} sm={6} md={2}>
-              <Typography variant="h6" className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              <Typography
+                variant="h6"
+                className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base"
+              >
                 Support
               </Typography>
               <Box className="space-y-1 sm:space-y-2">

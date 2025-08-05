@@ -15,6 +15,9 @@ import {
   CalendarToday,
   Search,
   Attractions,
+  ConfirmationNumber,
+  Smartphone,
+  Cancel,
 } from "@mui/icons-material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -208,8 +211,12 @@ export default function AttractionsSearchBar({ variant = "full", onSearch }) {
       {/* Features */}
       <Box className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            📱 Instant booking
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center justify-center gap-2"
+          >
+            <Smartphone sx={{ color: "#607d8b" }} />
+            Instant booking
           </Typography>
           <Typography
             variant="body2"
@@ -219,8 +226,12 @@ export default function AttractionsSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            🎫 Mobile tickets
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center gap-2"
+          >
+            <ConfirmationNumber sx={{ color: "#9c27b0" }} />
+            Mobile tickets
           </Typography>
           <Typography
             variant="body2"
@@ -230,8 +241,12 @@ export default function AttractionsSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="h6" className="font-semibold mb-1">
-            ❌ Free cancellation
+          <Typography
+            variant="h6"
+            className="font-semibold mb-1 flex items-center justify-center gap-2"
+          >
+            <Cancel sx={{ color: "#4caf50" }} />
+            Free cancellation
           </Typography>
           <Typography
             variant="body2"

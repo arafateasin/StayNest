@@ -143,6 +143,7 @@ function SearchPageContent() {
         }
 
         setResults(searchResults);
+        console.log(`Search completed for ${searchType}:`, searchResults);
       } catch (error) {
         console.error("Search error:", error);
         setResults([]);
@@ -579,7 +580,12 @@ function SearchPageLoading() {
           <Skeleton variant="text" width={300} height={40} className="mb-4" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[...Array(6)].map((_, index) => (
-              <Skeleton key={index} variant="rectangular" height={250} className="rounded-lg" />
+              <Skeleton
+                key={index}
+                variant="rectangular"
+                height={250}
+                className="rounded-lg"
+              />
             ))}
           </div>
         </Box>

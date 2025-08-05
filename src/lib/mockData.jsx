@@ -249,6 +249,221 @@ export const trendingDestinations = [
   },
 ];
 
+// Popular routes for flights
+export const popularFlightRoutes = [
+  {
+    from: "Kuala Lumpur (KUL)",
+    to: "Singapore (SIN)",
+    fromCode: "KUL",
+    toCode: "SIN",
+    price: 89,
+    duration: "1h 25m",
+  },
+  {
+    from: "Kuala Lumpur (KUL)",
+    to: "Bangkok (BKK)",
+    fromCode: "KUL",
+    toCode: "BKK",
+    price: 156,
+    duration: "2h 5m",
+  },
+  {
+    from: "Kuala Lumpur (KUL)",
+    to: "Jakarta (CGK)",
+    fromCode: "KUL",
+    toCode: "CGK",
+    price: 134,
+    duration: "2h 10m",
+  },
+  {
+    from: "Singapore (SIN)",
+    to: "Bangkok (BKK)",
+    fromCode: "SIN",
+    toCode: "BKK",
+    price: 198,
+    duration: "2h 20m",
+  },
+];
+
+// Popular attractions with detailed information
+export const popularAttractions = [
+  {
+    id: 1,
+    name: "Petronas Twin Towers",
+    location: "Kuala Lumpur, Malaysia",
+    category: "Landmark",
+    price: 25,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&h=400&fit=crop",
+    description: "Iconic twin skyscrapers and symbol of Malaysia",
+  },
+  {
+    id: 2,
+    name: "Universal Studios Singapore",
+    location: "Sentosa Island, Singapore",
+    category: "Theme Park",
+    price: 89,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1586611292717-f828b167408c?w=600&h=400&fit=crop",
+    description: "World-class theme park with thrilling rides and shows",
+  },
+  {
+    id: 3,
+    name: "Gardens by the Bay",
+    location: "Marina Bay, Singapore",
+    category: "Garden",
+    price: 32,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=400&fit=crop",
+    description: "Futuristic gardens with iconic Supertree Grove",
+  },
+  {
+    id: 4,
+    name: "Batu Caves",
+    location: "Selangor, Malaysia",
+    category: "Religious Site",
+    price: 0,
+    rating: 4.3,
+    image:
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&h=400&fit=crop",
+    description: "Sacred Hindu temple complex in limestone caves",
+  },
+  {
+    id: 5,
+    name: "Langkawi Cable Car",
+    location: "Langkawi, Malaysia",
+    category: "Adventure",
+    price: 42,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&h=400&fit=crop",
+    description: "Scenic cable car ride with panoramic island views",
+  },
+  {
+    id: 6,
+    name: "Borobudur Temple",
+    location: "Yogyakarta, Indonesia",
+    category: "Historical Site",
+    price: 28,
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1555400082-b21d8489b878?w=600&h=400&fit=crop",
+    description: "Ancient Buddhist temple and UNESCO World Heritage site",
+  },
+];
+
+// Attraction categories with professional icons
+export const attractionCategories = [
+  { name: "Theme Parks", count: 45 },
+  { name: "Museums", count: 78 },
+  { name: "Tours", count: 156 },
+  { name: "Outdoor Activities", count: 89 },
+  { name: "Food & Drink", count: 234 },
+  { name: "Entertainment", count: 67 },
+  { name: "Shopping", count: 123 },
+  { name: "Wellness", count: 34 },
+];
+
+// Popular hotel destinations with extended information
+export const popularHotelDestinations = [
+  {
+    name: "Kuala Lumpur, Malaysia",
+    country: "Malaysia",
+    image:
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&h=600&fit=crop",
+    hotels: 1156,
+    avgPrice: 89,
+    description:
+      "Modern metropolis with iconic skyline and rich cultural heritage",
+  },
+  {
+    name: "Singapore",
+    country: "Singapore",
+    image:
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+    hotels: 892,
+    avgPrice: 168,
+    description: "Garden city with world-class dining and luxury shopping",
+  },
+  {
+    name: "Bangkok, Thailand",
+    country: "Thailand",
+    image:
+      "https://images.unsplash.com/photo-1563492065-1ec8a7c54513?w=800&h=600&fit=crop",
+    hotels: 1245,
+    avgPrice: 67,
+    description: "Vibrant capital with golden temples and bustling markets",
+  },
+  {
+    name: "Jakarta, Indonesia",
+    country: "Indonesia",
+    image:
+      "https://images.unsplash.com/photo-1555400082-b21d8489b878?w=800&h=600&fit=crop",
+    hotels: 734,
+    avgPrice: 54,
+    description: "Indonesia's bustling capital with rich history and culture",
+  },
+  {
+    name: "Manila, Philippines",
+    country: "Philippines",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    hotels: 456,
+    avgPrice: 72,
+    description:
+      "Historic city with Spanish colonial architecture and vibrant nightlife",
+  },
+  {
+    name: "Ho Chi Minh City, Vietnam",
+    country: "Vietnam",
+    image:
+      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop",
+    hotels: 623,
+    avgPrice: 45,
+    description:
+      "Dynamic city blending French colonial charm with modern energy",
+  },
+];
+
+// Popular airports for taxi services
+export const popularAirports = [
+  {
+    code: "KUL",
+    name: "Kuala Lumpur International Airport",
+    city: "Kuala Lumpur",
+    country: "Malaysia",
+    image:
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&h=400&fit=crop",
+  },
+  {
+    code: "SIN",
+    name: "Singapore Changi Airport",
+    city: "Singapore",
+    country: "Singapore",
+    image:
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=400&fit=crop",
+  },
+  {
+    code: "BKK",
+    name: "Bangkok Suvarnabhumi Airport",
+    city: "Bangkok",
+    country: "Thailand",
+    image:
+      "https://images.unsplash.com/photo-1563492065-1ec8a7c54513?w=600&h=400&fit=crop",
+  },
+  {
+    code: "CGK",
+    name: "Jakarta Soekarno-Hatta Airport",
+    city: "Jakarta",
+    country: "Indonesia",
+    image:
+      "https://images.unsplash.com/photo-1555400082-b21d8489b878?w=600&h=400&fit=crop",
+  },
+];
+
 // Filter utilities
 export const filterHotels = (hotels, filters) => {
   return hotels.filter((hotel) => {
@@ -422,7 +637,8 @@ export const mockTaxis = [
     price: 45,
     duration: "45 mins",
     features: ["Air Conditioning", "GPS Tracking", "English Speaking Driver"],
-    image: "🚗",
+    image:
+      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&crop=center",
   },
   {
     id: 2,
@@ -437,7 +653,8 @@ export const mockTaxis = [
       "Bottled Water",
       "GPS Tracking",
     ],
-    image: "🚙",
+    image:
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=300&fit=crop&crop=center",
   },
   {
     id: 3,
@@ -452,7 +669,8 @@ export const mockTaxis = [
       "Complimentary WiFi",
       "Refreshments",
     ],
-    image: "🚘",
+    image:
+      "https://images.unsplash.com/photo-1563720223441-4b578653b17d?w=400&h=300&fit=crop&crop=center",
   },
 ];
 

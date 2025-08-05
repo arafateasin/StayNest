@@ -190,7 +190,7 @@ export default function FlightsSearchBar({ variant = "full", onSearch }) {
             <TextField
               fullWidth
               label="Flying from"
-              placeholder="Country, city or airport"
+              placeholder=""
               value={searchData.from}
               onChange={(e) =>
                 setSearchData((prev) => ({ ...prev, from: e.target.value }))
@@ -201,6 +201,11 @@ export default function FlightsSearchBar({ variant = "full", onSearch }) {
                     <Flight className="text-primary-600" />
                   </InputAdornment>
                 ),
+              }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  height: "56px",
+                },
               }}
             />
 
@@ -219,16 +224,28 @@ export default function FlightsSearchBar({ variant = "full", onSearch }) {
             <TextField
               fullWidth
               label="Flying to"
-              placeholder="Country, city or airport"
+              placeholder=""
               value={searchData.to}
               onChange={(e) =>
                 setSearchData((prev) => ({ ...prev, to: e.target.value }))
               }
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Flight className="text-primary-600 transform rotate-45" />
+                  </InputAdornment>
+                ),
+              }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  height: "56px",
+                },
+              }}
             />
           </Box>
 
           {/* Search Button */}
-          <Box>
+          <Box className="flex items-end h-14">
             <Button
               fullWidth
               variant="contained"

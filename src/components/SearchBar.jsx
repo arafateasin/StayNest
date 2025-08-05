@@ -114,10 +114,16 @@ export default function SearchBar({ variant = "default", onSearch }) {
                 className="justify-start text-left h-12 sm:h-14"
               >
                 <Box className="flex-1 text-left">
-                  <Typography variant="caption" className="text-gray-500 block text-xs sm:text-sm">
+                  <Typography
+                    variant="caption"
+                    className="text-gray-500 block text-xs sm:text-sm"
+                  >
                     Where
                   </Typography>
-                  <Typography variant="body2" className="truncate text-sm sm:text-base">
+                  <Typography
+                    variant="body2"
+                    className="truncate text-sm sm:text-base"
+                  >
                     {location || "Search destinations"}
                   </Typography>
                 </Box>
@@ -210,7 +216,10 @@ export default function SearchBar({ variant = "default", onSearch }) {
               className="justify-start text-left h-12 sm:h-14"
             >
               <Box className="flex-1 text-left">
-                <Typography variant="caption" className="text-gray-500 block text-xs">
+                <Typography
+                  variant="caption"
+                  className="text-gray-500 block text-xs"
+                >
                   Who
                 </Typography>
                 <Typography variant="body2" className="text-sm">

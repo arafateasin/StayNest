@@ -21,6 +21,12 @@ import {
   Search,
   LocalTaxi,
   SwapVert,
+  DirectionsCar,
+  AirportShuttle,
+  DriveEta,
+  TrackChanges,
+  AttachMoney,
+  Schedule,
 } from "@mui/icons-material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -38,21 +44,26 @@ const vehicleTypes = [
     value: "economy",
     label: "Economy",
     capacity: "1-3 passengers",
-    icon: "🚗",
+    icon: <DirectionsCar className="text-2xl text-blue-600" />,
   },
   {
     value: "comfort",
     label: "Comfort",
     capacity: "1-4 passengers",
-    icon: "🚙",
+    icon: <DriveEta className="text-2xl text-green-600" />,
   },
   {
     value: "premium",
     label: "Premium",
     capacity: "1-3 passengers",
-    icon: "🚘",
+    icon: <LocalTaxi className="text-2xl text-yellow-600" />,
   },
-  { value: "van", label: "Van", capacity: "1-8 passengers", icon: "🚐" },
+  {
+    value: "van",
+    label: "Van",
+    capacity: "1-8 passengers",
+    icon: <AirportShuttle className="text-2xl text-purple-600" />,
+  },
 ];
 
 export default function TaxisSearchBar({ variant = "full", onSearch }) {
@@ -320,9 +331,7 @@ export default function TaxisSearchBar({ variant = "full", onSearch }) {
               }
             >
               <Box className="text-center">
-                <Typography variant="h4" className="mb-2">
-                  {vehicle.icon}
-                </Typography>
+                <Box className="mb-3 flex justify-center">{vehicle.icon}</Box>
                 <Typography variant="subtitle1" className="font-semibold">
                   {vehicle.label}
                 </Typography>
@@ -341,8 +350,11 @@ export default function TaxisSearchBar({ variant = "full", onSearch }) {
       {/* Features */}
       <Box className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
         <Box>
+          <Box className="flex justify-center mb-2">
+            <TrackChanges className="text-3xl text-blue-600" />
+          </Box>
           <Typography variant="h6" className="font-semibold mb-1">
-            ✈️ Flight tracking
+            Flight tracking
           </Typography>
           <Typography
             variant="body2"
@@ -352,8 +364,11 @@ export default function TaxisSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
+          <Box className="flex justify-center mb-2">
+            <AttachMoney className="text-3xl text-green-600" />
+          </Box>
           <Typography variant="h6" className="font-semibold mb-1">
-            💰 Fixed prices
+            Fixed prices
           </Typography>
           <Typography
             variant="body2"
@@ -363,8 +378,11 @@ export default function TaxisSearchBar({ variant = "full", onSearch }) {
           </Typography>
         </Box>
         <Box>
+          <Box className="flex justify-center mb-2">
+            <Schedule className="text-3xl text-purple-600" />
+          </Box>
           <Typography variant="h6" className="font-semibold mb-1">
-            🕒 24/7 service
+            24/7 service
           </Typography>
           <Typography
             variant="body2"
